@@ -2,5 +2,5 @@
 
 - Webpack 5
 - ESLint + Prettier, Husky
-- TSConfig
+- TypeScript, Babel
 - React with Styled Components
