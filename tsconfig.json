@@ -1,35 +1,32 @@
+// Файл "tsconfig.json":
+// - устанавливает корневой каталог проекта TypeScript;
+// - выполняет настройку параметров компиляции;
+// - указывает на файлы проекта.
+
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
-    "noImplicitAny": false,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "types": ["webpack-env"],
+  "compilerOptions": { // параметры компиляции
+    "target": "es6", // версия js, в которую скомпилируется код
+    "module": "es6", // версия для модульных систем
+    "moduleResolution": "node", // тип импорт модулей
+    "strict": true, // все настройки Strict Checks по умолчанию true
+    "noImplicitAny": false, // ошибка при неопределенных типах
+    "noImplicitReturns": true, // ошибка если не все ветки функции возвращают значения
+    "jsx": "react", // поддержка tsx
+    "skipLibCheck": true, // компиляция файлов с описанием типов
+    "esModuleInterop": true, // импорт как в es6
+    "allowSyntheticDefaultImports": true, // можем импортировать без * как дефолт импорты
+    "sourceMap": true, // создание соответствующие source map файлы ".map" для отображения номеров строк кода в браузерах
+    "baseUrl": ".", // путь до базовой папки для поиска не относительных путей до файлов
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"] // пути в проекте
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"] // библиотечные файлы полифилов, которые будут включены в итоговый выходной файл
   },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  },
-  "include": [
+  "include": [ //включить файлы в компиляцию
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./src/**/*.jsx",
     "./webpack-configs/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"] // исключение файлов из компиляции
 }

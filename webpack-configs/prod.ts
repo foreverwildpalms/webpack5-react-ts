@@ -29,9 +29,14 @@ const config: WebpackConfig = {
     module: {
         rules: [
             {
-                test: /\.(tsx|jsx|ts|js)?$/,
-                use: "babel-loader",
-                exclude: /node_modules/,
+                test: /\.(js|jsx)$/i,
+                use: ['babel-loader'],
+                exclude: /node_modules/i,
+            },
+            {
+                test: /\.(ts|tsx)/i,
+                use: ['ts-loader'],
+                exclude: /node_modules/i,
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/,
