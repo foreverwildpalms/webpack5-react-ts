@@ -6,7 +6,7 @@
 {
   "compilerOptions": { // параметры компиляции
     "target": "es6", // версия js, в которую скомпилируется код
-    "module": "es6", // версия для модульных систем
+    "module": "commonjs", // версия для модульных систем
     "moduleResolution": "node", // тип импорт модулей
     "strict": true, // все настройки Strict Checks по умолчанию true
     "noImplicitAny": false, // ошибка при неопределенных типах
