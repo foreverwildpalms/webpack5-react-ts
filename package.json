@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --open",
     "dev": "webpack --mode=development",
     "build": "webpack --mode=production",
-    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx,.vue,.json"
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx,.json"
   },
   "keywords": [
     "ts",
